@@ -8,6 +8,7 @@ export const StyledHeader = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
+  z-index: 1;
 
   .input-wrapper {
     width: 300px;

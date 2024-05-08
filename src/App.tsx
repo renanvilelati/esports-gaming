@@ -1,23 +1,25 @@
-import { ThemeProvider } from "styled-components"
-import { darkTheme, lightTheme } from "./styles/theme";
-import { useState } from "react";
-import { AppRouter } from "./router";
-import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
-import { GlobalStyle } from "./styles/global";
+import { ThemeProvider } from 'styled-components';
+import { darkTheme, lightTheme } from './styles/theme';
+import { useState } from 'react';
+import { AppRouter } from './router';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+import { GlobalStyle } from './styles/global';
+import { GlobalProvider } from './contexts/GlobalContext';
 
 function App() {
-
   const [isLightTheme, setIsLightTheme] = useState(false);
 
   return (
     <ThemeProvider theme={isLightTheme ? lightTheme : darkTheme}>
-      <Header />
-      <Sidebar />
-      <AppRouter />
-      <GlobalStyle />
+      <GlobalProvider>
+        <Header />
+        <Sidebar />
+        <AppRouter />
+        <GlobalStyle />
+      </GlobalProvider>
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;
