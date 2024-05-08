@@ -17,6 +17,7 @@ export const StyledHeader = styled.div`
     border-radius: 8px;
     position: relative;
     border: 1px solid ${({ theme }) => theme.colors.border};
+    margin-left: 4rem;
 
     svg {
       position: absolute;

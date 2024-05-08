@@ -1,6 +1,8 @@
+import { StyledSlide } from "./style"
+
 const Slide = () => {
   return (
-    <div>Slide</div>
+    <StyledSlide className="slide">Slide</StyledSlide>
   )
 }
 

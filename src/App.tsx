@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import { GlobalStyle } from './styles/global';
 import { GlobalProvider } from './contexts/GlobalContext';
+import Container from './components/Container';
 
 function App() {
   const [isLightTheme, setIsLightTheme] = useState(false);
@@ -15,7 +16,9 @@ function App() {
       <GlobalProvider>
         <Header />
         <Sidebar />
-        <AppRouter />
+        <Container>
+          <AppRouter />
+        </Container>
         <GlobalStyle />
       </GlobalProvider>
     </ThemeProvider>
