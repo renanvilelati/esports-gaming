@@ -9,7 +9,7 @@ const list: iTournamentList[] = [
     id: '1',
     name: 'Esport Tournament',
     gameLogo: 'lol-logo.png',
-    prize: 100000,
+    prize: '100k',
     teamLimit: 8,
     registeredTeams: 7,
     date: '2024-05-09T00:00:00.000Z',
@@ -19,31 +19,31 @@ const list: iTournamentList[] = [
     id: '2',
     name: 'Versus Tournament',
     gameLogo: 'cs-logo.png',
-    prize: 300000,
+    prize: '300k',
     teamLimit: 8,
     registeredTeams: 5,
     date: '2024-05-15T00:00:00.000Z',
-    tournamentLogo: 'tournament-2.png',
+    tournamentLogo: 'tournament-2.svg',
   },
   {
     id: '3',
     name: 'Gasmashs',
     gameLogo: 'lol-logo.png',
-    prize: 200000,
+    prize: '200k',
     teamLimit: 4,
     registeredTeams: 3,
     date: '2024-05-20T00:00:00.000Z',
-    tournamentLogo: 'tournament-3.png',
+    tournamentLogo: 'tournament-3.svg',
   },
   {
     id: '4',
     name: 'G2 Rivals',
     gameLogo: 'dota-logo.png',
-    prize: 250000,
+    prize: '250k',
     teamLimit: 4,
     registeredTeams: 4,
     date: '2024-05-25T00:00:00.000Z',
-    tournamentLogo: 'tournament-4.png',
+    tournamentLogo: 'tournament-4.svg',
   },
 ];
 
@@ -51,13 +51,17 @@ const UpcomingTournaments = () => {
   return (
     <StyledUpcomingTournaments className="upcoming-tournaments">
       <div className="header">
-        <BiTrophy size={20} />
-        <h4>Upcoming Tournaments</h4>
+        <h4>
+          <BiTrophy size={20} /> Upcoming Tournaments
+        </h4>
       </div>
 
       <TournamentList list={list} />
-      <Divider />
-      <button type='button'>See more</button>
+      <div className="btn-wrapper">
+        <button className="see-more-btn" type="button">
+          See more
+        </button>
+      </div>
     </StyledUpcomingTournaments>
   );
 };

@@ -2,7 +2,7 @@ export interface iTournamentList {
   id: string;
   name: string;
   gameLogo: string;
-  prize: number;
+  prize: string;
   teamLimit: number;
   registeredTeams: number;
   date: string;

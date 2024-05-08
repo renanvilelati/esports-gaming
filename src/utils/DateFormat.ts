@@ -8,5 +8,5 @@ export const dateFormatTimeAgo = (date: Date | string) => {
 };
 
 export const dateFormat = (date: Date | string) => {
-  return format(date, 'MM/yy');
+  return format(date, 'dd/MM/yy');
 };

@@ -9,8 +9,8 @@ export const StyledDashboard = styled.div`
 
   display: grid;
   gap: 1rem;
-  grid-template-columns: 954px 302px;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1000px 320px;
+  grid-template-rows: 470px 300px;
   grid-template-areas:
     'slide upcoming-tournaments'
     'top-games general-chat';
