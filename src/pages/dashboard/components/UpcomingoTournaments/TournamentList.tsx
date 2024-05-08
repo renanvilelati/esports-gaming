@@ -1,6 +1,13 @@
-const TournamentList = () => {
+import TournamentItem from "./TournamentItem"
+import { iTournamentList } from "./types/TournamentListType"
+
+interface TournamentListProps {
+  list: iTournamentList[]
+}
+
+const TournamentList = ({list}: TournamentListProps) => {
   return (
-    <div>TournamentList</div>
+    list.map( item => <TournamentItem tournamentItem={item} />)
   )
 }
 
