@@ -8,6 +8,35 @@ export const StyledSlide = styled.div<StyledSlideProps>`
   position: relative;
   cursor: pointer;
 
+  .bullets {
+    display: flex;
+    /* height: 2rem; */
+    gap: 0.2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+ 
+
+    span {
+      width: 0.75rem;
+      height: 0.25rem;
+      display: inline-block;
+      border-radius: 8px;
+      transition: all 0.4s;
+      background-color: ${({ theme }) => theme.colors.placeholder};
+    }
+
+    span.active {
+      width: 2rem;
+      background-color: ${({ theme }) => theme.colors.primary};
+    }
+  }
+
   @keyframes fly {
     50% {
       transform: translateY(-6.2px)

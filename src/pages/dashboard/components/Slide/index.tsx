@@ -39,6 +39,12 @@ const Slide = () => {
       <div className="see-more-wrapper">
         <button>See more</button>
       </div>
+
+      <div className="bullets">
+        <span></span>
+        <span className='active'></span>
+        <span></span>
+      </div>
     </StyledSlide>
   );
 };
