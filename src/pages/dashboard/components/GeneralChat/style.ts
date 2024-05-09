@@ -94,7 +94,9 @@ export const StyledChatItem = styled.div`
 
   .avatar {
     overflow: hidden;
-    clip-path: polygon(
+    position: relative;
+    padding-right: 4px;
+    /* clip-path: polygon(
       20% 0%,
       80% 0%,
       100% 20%,
@@ -103,12 +105,27 @@ export const StyledChatItem = styled.div`
       20% 100%,
       0% 80%,
       0% 20%
-    );
+    ); */
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 47%;
+      top: 48%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      background-image: url(../../../public/contorno.svg);
+      background-repeat: no-repeat;
+      z-index: 10;
+    }
   }
 
   .avatar img {
-    width: 39px;
-    height: 39px;
+    width: 40px;
+    height: 40px;
+    padding: 3px 2px 2px 2px;
+    object-fit: contain;
   }
 
   .content {

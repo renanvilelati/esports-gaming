@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 interface StyledHeaderProps {
   isLightTheme: boolean;
 }
@@ -59,10 +58,28 @@ export const StyledHeader = styled.div<StyledHeaderProps>`
     cursor: pointer;
   }
 
+  .avatar {
+    position: relative;
+    padding-right: 4px;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 47%;
+      top: 48%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      background-image: url(../../../public/contorno.svg);
+      background-repeat: no-repeat;
+      z-index: 10;
+    }
+  }
+
   .avatar img {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    padding: 3px;
+    object-fit: contain;
   }
 
   .text {
@@ -110,7 +127,7 @@ export const StyledHeader = styled.div<StyledHeaderProps>`
     background-color: #d9d9d9;
     color: ${({ theme }) => theme.colors.black};
   }
-  
+
   .theme-icon {
     padding: 0.4rem;
     border-radius: 50%;
