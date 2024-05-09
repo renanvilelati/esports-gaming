@@ -5,7 +5,7 @@ interface iStyledAsideProps {
 }
 
 export const StyledSidebar = styled.aside<iStyledAsideProps>`
-  width: 280px;
+  width: ${({ sidebarIsOpen }) => (sidebarIsOpen ? '280' : '124')}px;
   height: 100vh;
   background-color: ${({ theme }) => theme.colors.background};
   border: 1px solid ${({ theme }) => theme.colors.border};
@@ -14,6 +14,28 @@ export const StyledSidebar = styled.aside<iStyledAsideProps>`
   top: 0;
   bottom: 0;
   left: 0;
+  transition: width 0.4s;
+
+  .menu-open-btn {
+    position: absolute;
+    padding: 1rem;
+    top: 7rem;
+    right: -20px;
+    color: #FFF;
+    background-color: ${({ theme }) => theme.colors.chatCardBackground};
+    border: 1px solid ${({ theme }) => theme.colors.border};
+    border-radius: 50%;
+    box-shadow: 0px 13px 15px 0px #0001;
+    transition: transform 1s;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      transform: translateY(-5px);
+      background-color: ${({ theme }) => theme.colors.border};
+    }
+  }
 
   &::affter {
     content: '';
@@ -68,7 +90,7 @@ export const StyledSidebar = styled.aside<iStyledAsideProps>`
         content: '\\25C6';
         position: absolute;
         top: 50%;
-        left: 50px;
+        left: ${({ sidebarIsOpen }) => (sidebarIsOpen ? '50' : '25')}px;
         transform: translateY(-50%);
         color: ${({ theme }) => theme.colors.placeholder};
       }
@@ -77,7 +99,7 @@ export const StyledSidebar = styled.aside<iStyledAsideProps>`
         content: '\\25C6';
         position: absolute;
         top: 50%;
-        left: 50px;
+        left: ${({ sidebarIsOpen }) => (sidebarIsOpen ? '50' : '25')}px;
         transform: translateY(-50%);
         color: ${({ theme }) => theme.colors.primary};
       }
@@ -91,7 +113,7 @@ export const StyledSidebar = styled.aside<iStyledAsideProps>`
         align-items: center;
         gap: 1rem;
         color: ${({ theme }) => theme.colors.white};
-        padding-left: ${({ sidebarIsOpen }) => (sidebarIsOpen ? 5 : 2.2)}rem;
+        padding-left: ${({ sidebarIsOpen }) => (sidebarIsOpen ? 5 : 3)}rem;
       }
 
       &:last-of-type {

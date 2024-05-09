@@ -1,3 +1,4 @@
+import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 import Logo from '../../../public/logo.png';
 import { useGlobalContext } from '../../contexts/GlobalContext';
 import { createSidebarMenu } from '../../utils/createSidebarMenu';
@@ -6,13 +7,20 @@ import { StyledSidebar } from './style';
 import { dataMenu } from './types/menu';
 
 const Sidebar = () => {
-  const { sidebarIsOpen } = useGlobalContext();
+  const { sidebarIsOpen, handleOpenSidebar } = useGlobalContext();
 
   return (
     <StyledSidebar sidebarIsOpen={sidebarIsOpen}>
       <div className="logo">
         <img src={Logo} className="logo" alt="Logomarca da empresa" />
       </div>
+
+      <button className="menu-open-btn" onClick={handleOpenSidebar}>
+        {
+          sidebarIsOpen ? <SlArrowLeft size={12} /> : <SlArrowRight size={12} />
+        }
+        
+        </button>
 
       <nav>
         <ul className="test">

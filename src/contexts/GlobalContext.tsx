@@ -21,7 +21,7 @@ export const GlobalContext = createContext<iGlobalContext>(
 );
 
 export const GlobalProvider = ({ children }: iGlobalProviderProps) => {
-  const [sidebarIsOpen, setSidebarIsOpen] = useState(true);
+  const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
   const [isLightTheme, setIsLightTheme] = useState(false);
 
   const handleChangeTheme = () => {   
