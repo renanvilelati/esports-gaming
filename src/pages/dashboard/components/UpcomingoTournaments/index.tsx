@@ -2,7 +2,6 @@ import { BiTrophy } from 'react-icons/bi';
 import { StyledUpcomingTournaments } from './style';
 import TournamentList from './TournamentList';
 import { iTournamentList } from './types/TournamentListType';
-import Divider from '../../../../components/Divider';
 
 const list: iTournamentList[] = [
   {

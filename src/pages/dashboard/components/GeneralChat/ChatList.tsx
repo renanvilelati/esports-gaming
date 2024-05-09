@@ -1,6 +1,13 @@
-const ChatList = () => {
+import ChatItem from "./ChatItem"
+import { iChatList } from "./types/ChatListType"
+
+interface ChatListProps {
+  list: iChatList[]
+}
+
+const ChatList = ({list}: ChatListProps) => {
   return (
-    <div>ChatList</div>
+    list.map( item => <ChatItem chatItem={item} />)
   )
 }
 
