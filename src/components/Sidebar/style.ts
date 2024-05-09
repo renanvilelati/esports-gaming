@@ -63,7 +63,6 @@ export const StyledSidebar = styled.aside<iStyledAsideProps>`
       cursor: pointer;
       transition: all 0.4s;
       position: relative;
-      position: relative;
 
       &:hover::after {
         content: '\\25C6';
@@ -74,10 +73,13 @@ export const StyledSidebar = styled.aside<iStyledAsideProps>`
         color: ${({ theme }) => theme.colors.placeholder};
       }
 
-      .active {
-        &:hover::after {
-          color: ${({ theme }) => theme.colors.primary};
-        }
+      &.active::after {
+        content: '\\25C6';
+        position: absolute;
+        top: 50%;
+        left: 50px;
+        transform: translateY(-50%);
+        color: ${({ theme }) => theme.colors.primary};
       }
 
       a {

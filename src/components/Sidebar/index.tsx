@@ -28,7 +28,7 @@ const Sidebar = () => {
                 <Divider />
               </>
             ) : (
-              <li key={item.id}>
+              <li key={item.id} className={item.class}>
                 <a href={`/${item.href}`}>
                   {createSidebarMenu(item.code)}
                   {sidebarIsOpen ? item.label : null}
