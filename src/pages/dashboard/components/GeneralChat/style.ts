@@ -4,6 +4,8 @@ export const StyledGeneralChat = styled.div`
   background: ${({ theme }) => theme.colors.cardBackground};
   border: 1px solid ${({ theme }) => theme.colors.border};
   padding: 1.5rem;
+  max-height: 385px;
+  border-radius: 1.5rem;
 
   &::-webkit-scrollbar {
     height: 5px;

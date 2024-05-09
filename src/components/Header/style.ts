@@ -4,16 +4,16 @@ export const StyledHeader = styled.div`
   height: 80px;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.background};
-  padding: 0 280px;
+  padding: 1rem 245px;
+  padding-top: 1.5rem;
   align-items: center;
   display: flex;
   justify-content: space-between;
-  z-index: 1;
 
   .input-wrapper {
     width: 300px;
     height: 40px;
-    background:  #151515;
+    background: #151515;
     border-radius: 8px;
     position: relative;
     border: 1px solid ${({ theme }) => theme.colors.border};
@@ -40,7 +40,7 @@ export const StyledHeader = styled.div`
   .profile-wrapper {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 2.5rem;
   }
 
   .profile {

@@ -7,6 +7,7 @@ export const StyledUpcomingTournaments = styled.div`
   overflow-y: auto;
   overflow: hidden;
   padding: 1.5rem;
+  border-radius: 1.5rem;
 
   .logo {
     display: flex;
