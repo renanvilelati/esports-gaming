@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface StyledHeaderProps {
-  isLightTheme: boolean
+  isLightTheme: boolean;
 }
 
 export const StyledHeader = styled.div<StyledHeaderProps>`
@@ -44,13 +44,19 @@ export const StyledHeader = styled.div<StyledHeaderProps>`
     display: flex;
     align-items: center;
     gap: 2.5rem;
-    cursor: pointer;
+
+    &:hover {
+      .arrow-down {
+        transform: translateY(5px);
+      }
+    }
   }
 
   .profile {
     display: flex;
     gap: 0.5rem;
     align-items: center;
+    cursor: pointer;
   }
 
   .avatar img {
@@ -74,6 +80,7 @@ export const StyledHeader = styled.div<StyledHeaderProps>`
   }
 
   .arrow-down {
+    transition: transform 1s;
     color: ${({ theme }) => theme.colors.body2};
   }
 
@@ -93,12 +100,11 @@ export const StyledHeader = styled.div<StyledHeaderProps>`
     display: flex;
     border-radius: 24px;
     align-items: center;
-    background-color: ${({ isLightTheme }) => isLightTheme ? '#FFF' :  '#151515'};
+    background-color: ${({ isLightTheme }) =>
+      isLightTheme ? '#FFF' : '#151515'};
     justify-content: space-evenly;
     cursor: pointer;
   }
-
-
 
   .theme-btn-active {
     background-color: #d9d9d9;
@@ -112,10 +118,11 @@ export const StyledHeader = styled.div<StyledHeaderProps>`
     height: 32px;
     transition: background-color 0.8s;
     color: ${({ theme }) => theme.colors.placeholder};
-  }  
+  }
 
   .notification {
     position: relative;
+    cursor: pointer;
   }
 
   .notification .bullet {
