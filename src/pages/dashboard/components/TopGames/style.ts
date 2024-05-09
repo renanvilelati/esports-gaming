@@ -54,9 +54,8 @@ export const StyledTopGames = styled.div`
 
   .game-list {
     display: flex;
-    gap: 0.5rem;
-    max-width: 100%;
-    overflow-x: scroll;
+    align-items: center;
+    column-gap: 2rem;
   }
 
   .game-item {
@@ -105,7 +104,6 @@ export const StyledTopGames = styled.div`
     margin-top: 3rem;
     justify-content: flex-start;
     width: 100vw;
-    max-width: 335px;
     gap: 0.5rem;
 
     h2 {
@@ -120,22 +118,28 @@ export const StyledTopGames = styled.div`
     }
 
     button.preview {
-      left: -24px;
+      left: -3vw;
     }
 
     button.next {
-      right: -16px;
+      right: 5vw;
     }
 
     .background {
       img {
-       height: 260px;
-     }
+        height: 260px;
+      }
+    }
+
+    .game-list {
+      max-width: 100%;
+      overflow-x: scroll;
+      column-gap: 0.5rem;
 
     }
 
     .game-logo {
       width: 80px;
-     }
+    }
   }
 `;
