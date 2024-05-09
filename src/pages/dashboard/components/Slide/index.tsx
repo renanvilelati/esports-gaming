@@ -1,9 +1,11 @@
 import { FiUsers } from 'react-icons/fi';
 import { StyledSlide } from './style';
+import { useGlobalContext } from '../../../../contexts/GlobalContext';
 
 const Slide = () => {
+  const {isLightTheme} = useGlobalContext()
   return (
-    <StyledSlide className="slide">
+    <StyledSlide isLightTheme={isLightTheme} className="slide">
       <div className="background"></div>
 
       <div className="content">

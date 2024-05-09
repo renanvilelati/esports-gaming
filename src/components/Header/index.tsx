@@ -10,7 +10,7 @@ const Header = () => {
 
 
   return (
-    <StyledHeader>
+    <StyledHeader isLightTheme={isLightTheme}>
       <div className="input-wrapper">
         <BiSearch size={20} />
         <input type="text" placeholder='Type / to search' />

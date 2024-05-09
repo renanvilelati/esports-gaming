@@ -1,8 +1,19 @@
 import styled from 'styled-components';
 
-export const StyledSlide = styled.div`
+interface StyledSlideProps {
+  isLightTheme: boolean
+}
+
+export const StyledSlide = styled.div<StyledSlideProps>`
   position: relative;
   cursor: pointer;
+
+  @keyframes fly {
+    50% {
+      transform: translateY(-6.2px)
+      scale(1.01)
+    }
+  }
 
   &:hover {
     .see-more-wrapper {
@@ -12,12 +23,12 @@ export const StyledSlide = styled.div`
 
     .background {
       scale: 1.02;
-      opacity: 0.1;
+      opacity:  ${({isLightTheme}) => isLightTheme ? 'initial' : '0.1'} ;
     }
 
     .slide-image {
       scale: 1.01;
-      transform: translateY(-4px)
+      animation: fly 5s infinite ;
     }
   }
 
@@ -30,9 +41,10 @@ export const StyledSlide = styled.div`
     height: 100%;
     position: relative;
     z-index: 1;
-    opacity: 0.2;
+    opacity: ${({isLightTheme}) => isLightTheme ? 1 : 0.2} ;
     transition: all 0.4s ease-in-out;
     overflow: hidden;
+    border-radius: 1.5rem;
 
     &::before {
       content: '';
@@ -48,6 +60,17 @@ export const StyledSlide = styled.div`
         rgba(14, 14, 14, 50) 100%
       );
     }
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background: ${({isLightTheme}) => isLightTheme ? '#0005' : 'initial'} ;
+    }
+
   }
 
   .content {
@@ -83,13 +106,13 @@ export const StyledSlide = styled.div`
   .text {
     h2 {
       font-size: 2rem;
-      color: ${({ theme }) => theme.colors.body};
+      color: #EEE;
     }
 
     p {
       font-size: 0.875rem;
       width: 40%;
-      color: ${({ theme }) => theme.colors.body2};
+      color: #CCC;
     }
   }
 
@@ -146,9 +169,10 @@ export const StyledSlide = styled.div`
     opacity: 0;
     scale: 0;
     transition: opacity 0.5s ease-in-out;
+    z-index: 10;
 
     button {
-      color: ${({ theme }) => theme.colors.body};
+      color: #EEE;
       background: transparent;
     }
   }

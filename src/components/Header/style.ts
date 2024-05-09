@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const StyledHeader = styled.div`
+interface StyledHeaderProps {
+  isLightTheme: boolean
+}
+
+export const StyledHeader = styled.div<StyledHeaderProps>`
   height: 80px;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.background};
@@ -12,7 +16,7 @@ export const StyledHeader = styled.div`
   .input-wrapper {
     width: 300px;
     height: 40px;
-    background: #151515;
+    background: ${({ theme }) => theme.colors.chatCardBackground};
     border-radius: 8px;
     position: relative;
     border: 1px solid ${({ theme }) => theme.colors.border};
@@ -23,6 +27,7 @@ export const StyledHeader = styled.div`
       color: ${({ theme }) => theme.colors.placeholder};
       top: 50%;
       transform: translateY(-50%);
+      pointer-events: none;
     }
 
     input {
@@ -30,7 +35,7 @@ export const StyledHeader = styled.div`
       width: 100%;
       color: ${({ theme }) => theme.colors.body2};
       background: transparent;
-      border: 1px solid #141414;
+      border: none;
       padding: 0 2.5rem;
     }
   }
@@ -88,7 +93,7 @@ export const StyledHeader = styled.div`
     display: flex;
     border-radius: 24px;
     align-items: center;
-    background-color: #151515;
+    background-color: ${({ isLightTheme }) => isLightTheme ? '#FFF' :  '#151515'};
     justify-content: space-evenly;
     cursor: pointer;
   }

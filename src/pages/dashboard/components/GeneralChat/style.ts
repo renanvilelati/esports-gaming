@@ -123,9 +123,9 @@ export const StyledChatItem = styled.div`
   }
 
   .name {
-    color: ${({ theme }) => theme.colors.body};
+    color: ${({ theme }) => theme.colors.primary};
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: 600;
   }
   .message {
     color: ${({ theme }) => theme.colors.body2};
