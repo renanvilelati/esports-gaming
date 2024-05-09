@@ -3,20 +3,21 @@ import { breakpoints } from '../../constants/breakpoints';
 
 interface iStyledAsideProps {
   sidebarIsOpen: boolean;
+  isLightTheme: boolean;
 }
 
 export const StyledSidebar = styled.aside<iStyledAsideProps>`
   width: ${({ sidebarIsOpen }) => (sidebarIsOpen ? '300' : '124')}px;
   height: 100vh;
   background: transparent;
-  border: 1px solid ${({ theme }) => theme.colors.border};
+  border-right: 1px solid ${({ theme }) => theme.colors.border};
   z-index: 3;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   transition: width 0.4s;
-  box-shadow: 20px 0px 20px 20px #0003;
+  box-shadow: 20px 0px 20px 20px #0002;
 
   &::after {
     content: '';
@@ -25,7 +26,7 @@ export const StyledSidebar = styled.aside<iStyledAsideProps>`
     height: 100%;
     position: absolute;
     z-index: 1;
-    background-color: #0e0e0ed9;
+    background-color: ${({isLightTheme}) => isLightTheme ? '#FFF' : '#0e0e0ed9'};
     backdrop-filter: blur(3px);
   }
 
@@ -34,9 +35,9 @@ export const StyledSidebar = styled.aside<iStyledAsideProps>`
     padding: 1rem;
     top: 7rem;
     right: -20px;
-    color: #fff;
     background-color: ${({ theme }) => theme.colors.chatCardBackground};
     border: 1px solid ${({ theme }) => theme.colors.border};
+    color: ${({ theme }) => theme.colors.body};
     border-radius: 50%;
     box-shadow: 0px 13px 15px 0px #0001;
     transition: transform 1s;

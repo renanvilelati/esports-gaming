@@ -7,10 +7,10 @@ import { StyledSidebar } from './style';
 import { dataMenu } from './types/menu';
 
 const Sidebar = () => {
-  const { sidebarIsOpen, handleOpenSidebar } = useGlobalContext();
+  const { sidebarIsOpen, isLightTheme, handleOpenSidebar } = useGlobalContext();
 
   return (
-    <StyledSidebar sidebarIsOpen={sidebarIsOpen}>
+    <StyledSidebar sidebarIsOpen={sidebarIsOpen} isLightTheme={isLightTheme}>
       <div className="logo">
         <img src={Logo} className="logo" alt="Logomarca da empresa" />
       </div>

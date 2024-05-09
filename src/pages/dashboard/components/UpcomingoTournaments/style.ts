@@ -4,9 +4,9 @@ import { breakpoints } from '../../../../constants/breakpoints';
 export const StyledUpcomingTournaments = styled.div`
   background: ${({ theme }) => theme.colors.cardBackground};
   border: 1px solid ${({ theme }) => theme.colors.border};
-  /* max-height: 475px; */
   padding: 1.5rem;
   border-radius: 1.5rem;
+  margin-bottom: 0.8rem;
 
   .logo {
     display: flex;
