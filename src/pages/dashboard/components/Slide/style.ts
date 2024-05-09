@@ -64,7 +64,7 @@ export const StyledSlide = styled.div<StyledSlideProps>`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../../../../../public/lolg-bg.jpg);
+    background-image: url('/lolg-bg.jpg');
     width: 100%;
     height: 100%;
     position: relative;
@@ -211,6 +211,9 @@ export const StyledSlide = styled.div<StyledSlideProps>`
     }
 
     .text {
+      padding: 0 1rem;
+
+
       h2 {
         font-size: 1.25rem;
       }
@@ -226,6 +229,7 @@ export const StyledSlide = styled.div<StyledSlideProps>`
     }
 
     .players-quantity {
+      padding-left: 1rem;
       .avatars {
         position: relative;
         width: 60px;

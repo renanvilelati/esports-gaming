@@ -105,6 +105,7 @@ export const StyledTopGames = styled.div`
     justify-content: flex-start;
     width: 100vw;
     gap: 0.5rem;
+    padding: 2rem 0;
 
     h2 {
       left: 0;

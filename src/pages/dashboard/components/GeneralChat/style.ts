@@ -45,8 +45,14 @@ export const StyledGeneralChat = styled.div`
 
   
   @media ${breakpoints.sm} {
+    padding: 2rem 1rem;
+
     .header {
       padding: 0 1rem;
+    }
+
+    .see-more-btn {
+      font-size: 0.875rem;
     }
   }
 `;
@@ -113,7 +119,7 @@ export const StyledChatItem = styled.div`
       transform: translate(-50%, -50%);
       width: 100%;
       height: 100%;
-      background-image: url(../../../public/contorno.svg);
+      background-image: url('/contorno.svg');
       background-repeat: no-repeat;
       z-index: 10;
     }

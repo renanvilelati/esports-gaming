@@ -4,9 +4,7 @@ import { breakpoints } from '../../../../constants/breakpoints';
 export const StyledUpcomingTournaments = styled.div`
   background: ${({ theme }) => theme.colors.cardBackground};
   border: 1px solid ${({ theme }) => theme.colors.border};
-  max-height: 475px;
-  overflow-y: auto;
-  overflow: hidden;
+  /* max-height: 475px; */
   padding: 1.5rem;
   border-radius: 1.5rem;
 
@@ -50,8 +48,15 @@ export const StyledUpcomingTournaments = styled.div`
   }
 
   @media ${breakpoints.sm} {
+    padding: 2rem 0;
+
     .header {
       padding: 0 1rem;
+    }
+
+    
+    .see-more-btn {
+      font-size: 0.875rem;
     }
   }
 `;

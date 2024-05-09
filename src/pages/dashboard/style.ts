@@ -24,24 +24,22 @@ export const StyledDashboard = styled.div`
 
   .top-games {
     grid-area: top-games;
-    padding: 2rem 0;
   }
   
   .upcoming-tournaments {
-    padding: 2rem 0;
     grid-area: upcoming-tournaments;
   }
   
   .general-chat {
-    padding: 2rem 0;
     grid-area: general-chat;
   }
 
   @media ${breakpoints.sm} {
     max-height: 100%;
     padding: 1rem;
+    gap: 1rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 205px 1fr 500px 1fr;
+    grid-template-rows: 205px 1fr 520px 1fr;
     grid-template-areas:
         'slide'
         'top-games'

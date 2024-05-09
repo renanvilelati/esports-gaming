@@ -70,7 +70,7 @@ export const StyledHeader = styled.div<StyledHeaderProps>`
       transform: translate(-50%, -50%);
       width: 100%;
       height: 100%;
-      background-image: url(../../../public/contorno.svg);
+      background-image: url('/contorno.svg');
       background-repeat: no-repeat;
       z-index: 10;
     }
