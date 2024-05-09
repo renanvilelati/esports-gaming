@@ -18,6 +18,34 @@ export const StyledTopGames = styled.div`
     font-weight: 600;
   }
 
+  button.preview, button.next {
+    position: absolute;
+    background: transparent;
+    padding: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: ${({ theme }) => theme.colors.body};
+    background-color: ${({ theme }) => theme.colors.chatCardBackground};
+    border-radius: 50%;
+    box-shadow: 0px 13px 15px 0px #0001;
+    transition: transform 0.4s;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      transform: translateY(-60%);
+    }
+  }
+
+  button.preview {
+    left: 20px;
+  }
+  
+  button.next {
+    right: 20px;
+  }
+
   .background img {
     border-radius: 2rem;
   }

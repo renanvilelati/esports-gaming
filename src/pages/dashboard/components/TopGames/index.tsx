@@ -1,5 +1,5 @@
 import { StyledTopGames } from './style';
-
+import {SlArrowLeft , SlArrowRight  } from 'react-icons/sl'
 interface iTopGamesList {
   id: string;
   background: string;
@@ -38,12 +38,13 @@ const TopGames = () => {
   return (
     <StyledTopGames className="top-games">
       <h2>Top Games</h2>
+      <button className="preview"><SlArrowLeft size={12} /></button>
+      <button className="next"><SlArrowRight size={12} /></button>
       {list.map((game: iTopGamesList) => (
         <div key={game.id} className="game-item">
           <div className="background">
             <img src={game.background} alt="Game logo" height={350} />
           </div>
-
           <img className="game-logo" src={game.gameLogo} alt="Game logo" />
         </div>
       ))}
