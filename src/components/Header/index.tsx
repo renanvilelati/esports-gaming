@@ -2,8 +2,13 @@ import { StyledHeader } from './style';
 import { BiSearch, BiSun } from 'react-icons/bi';
 import { BsFillMoonStarsFill, BsDiamondFill } from 'react-icons/bs';
 import { IoIosArrowDown, IoMdNotificationsOutline  } from 'react-icons/io';
+import { useGlobalContext } from '../../contexts/GlobalContext';
 
 const Header = () => {
+
+  const {isLightTheme, handleChangeTheme} = useGlobalContext()
+
+
   return (
     <StyledHeader>
       <div className="input-wrapper">
@@ -12,9 +17,9 @@ const Header = () => {
       </div>
 
       <div className="profile-wrapper">
-        <div className="theme-btn">
-          <BsFillMoonStarsFill className='moon-icon' size={24} />
-          <BiSun className='sun-icon' size={24} />
+        <div className="theme-btn" onClick={handleChangeTheme}>
+          <BsFillMoonStarsFill className={isLightTheme ? 'theme-icon' : 'theme-btn-active theme-icon'} size={24} />
+          <BiSun className={isLightTheme ? 'theme-btn-active theme-icon' : 'theme-icon'} size={24} />
         </div>
 
         <div className="notification">

@@ -24,7 +24,8 @@ export const GlobalProvider = ({ children }: iGlobalProviderProps) => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(true);
   const [isLightTheme, setIsLightTheme] = useState(false);
 
-  const handleChangeTheme = () => {
+  const handleChangeTheme = () => {   
+    
     setIsLightTheme(!isLightTheme);
   };
 

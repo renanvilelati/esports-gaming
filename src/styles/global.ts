@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 import { breakpoints } from '../constants/breakpoints';
 
 export const GlobalStyle = createGlobalStyle`
@@ -6,10 +6,15 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
   }
 
   html {
     font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    background-color: ${({ theme }) => theme.colors.background};
   }
 
   button {
@@ -28,4 +33,4 @@ export const GlobalStyle = createGlobalStyle`
   a {
   text-decoration: none;
 }
-`
+`;

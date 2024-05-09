@@ -13,6 +13,7 @@ interface iTheme {
     success: string;
     error: string;
     warning: string;
+    black: string;
   };
 }
 
@@ -31,6 +32,7 @@ export const darkTheme: iTheme = {
     placeholder: '#555555',
     cardBackground: '#0E0E0E',
     chatCardBackground: '#111111',
+    black: '#333',
   },
 };
 
@@ -49,5 +51,6 @@ export const lightTheme: iTheme = {
     placeholder: '#7b7b7b',
     cardBackground: '#eee',
     chatCardBackground: '#eee',
+    black: '#333',
   },
 };

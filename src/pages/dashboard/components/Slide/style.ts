@@ -2,6 +2,24 @@ import styled from 'styled-components';
 
 export const StyledSlide = styled.div`
   position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .see-more-wrapper {
+      opacity: 1;
+      scale: 1;
+    }
+
+    .background {
+      scale: 1.02;
+      opacity: 0.1;
+    }
+
+    .slide-image {
+      scale: 1.01;
+      transform: translateY(-4px)
+    }
+  }
 
   .background {
     background-position: center;
@@ -13,6 +31,8 @@ export const StyledSlide = styled.div`
     position: relative;
     z-index: 1;
     opacity: 0.2;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
 
     &::before {
       content: '';
@@ -56,6 +76,8 @@ export const StyledSlide = styled.div`
     width: 570px;
     right: -16px;
     z-index: 5;
+    transition: all 1s;
+
   }
 
   .text {
@@ -121,6 +143,9 @@ export const StyledSlide = styled.div`
     padding: 0.5rem 2rem;
     border-radius: 16px;
     background: linear-gradient(90deg, rgba(17, 17, 17, 0.46) 0%, #3e2347 100%);
+    opacity: 0;
+    scale: 0;
+    transition: opacity 0.5s ease-in-out;
 
     button {
       color: ${({ theme }) => theme.colors.body};

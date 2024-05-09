@@ -4,8 +4,7 @@ export const StyledHeader = styled.div`
   height: 80px;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.background};
-  padding: 1rem 245px;
-  padding-top: 1.5rem;
+  padding: 1.5rem 216px 1rem 2rem;
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -17,7 +16,6 @@ export const StyledHeader = styled.div`
     border-radius: 8px;
     position: relative;
     border: 1px solid ${({ theme }) => theme.colors.border};
-    margin-left: 4rem;
 
     svg {
       position: absolute;
@@ -41,6 +39,7 @@ export const StyledHeader = styled.div`
     display: flex;
     align-items: center;
     gap: 2.5rem;
+    cursor: pointer;
   }
 
   .profile {
@@ -94,17 +93,21 @@ export const StyledHeader = styled.div`
     cursor: pointer;
   }
 
-  .moon-icon {
+
+
+  .theme-btn-active {
     background-color: #d9d9d9;
+    color: ${({ theme }) => theme.colors.black};
+  }
+  
+  .theme-icon {
+    padding: 0.4rem;
     border-radius: 50%;
     width: 32px;
     height: 32px;
-    padding: 0.5rem;
-  }
-
-  .sun-icon {
+    transition: background-color 0.8s;
     color: ${({ theme }) => theme.colors.placeholder};
-  }
+  }  
 
   .notification {
     position: relative;
