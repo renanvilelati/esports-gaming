@@ -40,6 +40,8 @@ const TopGames = () => {
       <h2>Top Games</h2>
       <button className="preview"><SlArrowLeft size={12} /></button>
       <button className="next"><SlArrowRight size={12} /></button>
+      <div className="game-list">
+
       {list.map((game: iTopGamesList) => (
         <div key={game.id} className="game-item">
           <div className="background">
@@ -48,6 +50,7 @@ const TopGames = () => {
           <img className="game-logo" src={game.gameLogo} alt="Game logo" />
         </div>
       ))}
+      </div>
     </StyledTopGames>
   );
 };

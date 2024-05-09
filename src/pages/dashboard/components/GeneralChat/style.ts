@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoints } from '../../../../constants/breakpoints';
 
 export const StyledGeneralChat = styled.div`
   background: ${({ theme }) => theme.colors.cardBackground};
@@ -39,6 +40,13 @@ export const StyledGeneralChat = styled.div`
 
     &:hover {
       color: ${({ theme }) => theme.colors.primary};
+    }
+  }
+
+  
+  @media ${breakpoints.sm} {
+    .header {
+      padding: 0 1rem;
     }
   }
 `;
@@ -96,16 +104,6 @@ export const StyledChatItem = styled.div`
     overflow: hidden;
     position: relative;
     padding-right: 4px;
-    /* clip-path: polygon(
-      20% 0%,
-      80% 0%,
-      100% 20%,
-      100% 80%,
-      80% 100%,
-      20% 100%,
-      0% 80%,
-      0% 20%
-    ); */
 
     &::after {
       content: '';

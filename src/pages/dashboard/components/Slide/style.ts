@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { breakpoints } from '../../../../constants/breakpoints';
 
 interface StyledSlideProps {
-  isLightTheme: boolean
+  isLightTheme: boolean;
 }
 
 export const StyledSlide = styled.div<StyledSlideProps>`
@@ -20,7 +21,6 @@ export const StyledSlide = styled.div<StyledSlideProps>`
     bottom: -1rem;
     left: 50%;
     transform: translateX(-50%);
- 
 
     span {
       width: 0.75rem;
@@ -39,8 +39,7 @@ export const StyledSlide = styled.div<StyledSlideProps>`
 
   @keyframes fly {
     50% {
-      transform: translateY(-6.2px)
-      scale(1.01)
+      transform: translateY(-6.2px) scale(1.01);
     }
   }
 
@@ -52,12 +51,12 @@ export const StyledSlide = styled.div<StyledSlideProps>`
 
     .background {
       scale: 1.02;
-      opacity:  ${({isLightTheme}) => isLightTheme ? 'initial' : '0.1'} ;
+      opacity: ${({ isLightTheme }) => (isLightTheme ? 'initial' : '0.1')};
     }
 
     .slide-image {
       scale: 1.01;
-      animation: fly 5s infinite ;
+      animation: fly 5s infinite;
     }
   }
 
@@ -70,7 +69,7 @@ export const StyledSlide = styled.div<StyledSlideProps>`
     height: 100%;
     position: relative;
     z-index: 1;
-    opacity: ${({isLightTheme}) => isLightTheme ? 1 : 0.2} ;
+    opacity: ${({ isLightTheme }) => (isLightTheme ? 1 : 0.2)};
     transition: all 0.4s ease-in-out;
     overflow: hidden;
     border-radius: 1.5rem;
@@ -97,9 +96,8 @@ export const StyledSlide = styled.div<StyledSlideProps>`
       top: 0;
       left: 0;
       position: absolute;
-      background: ${({isLightTheme}) => isLightTheme ? '#0005' : 'initial'} ;
+      background: ${({ isLightTheme }) => (isLightTheme ? '#0005' : 'initial')};
     }
-
   }
 
   .content {
@@ -129,19 +127,18 @@ export const StyledSlide = styled.div<StyledSlideProps>`
     right: -16px;
     z-index: 5;
     transition: all 1s;
-
   }
 
   .text {
     h2 {
       font-size: 2rem;
-      color: #EEE;
+      color: #eee;
     }
 
     p {
       font-size: 0.875rem;
       width: 40%;
-      color: #CCC;
+      color: #ccc;
     }
   }
 
@@ -197,12 +194,83 @@ export const StyledSlide = styled.div<StyledSlideProps>`
     background: linear-gradient(90deg, rgba(17, 17, 17, 0.46) 0%, #3e2347 100%);
     opacity: 0;
     scale: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 1s ease-in-out;
     z-index: 10;
 
     button {
-      color: #EEE;
+      color: #eee;
       background: transparent;
     }
+  }
+
+  @media ${breakpoints.sm} {
+    padding-left: 0;
+
+    .content {
+      padding-left: 0;
+    }
+
+    .text {
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      p {
+        width: 57%;
+        font-size: 0.75rem;
+      }
+    }
+
+    .quantity svg {
+      display: none;
+    }
+
+    .players-quantity {
+      .avatars {
+        position: relative;
+        width: 60px;
+        display: flex;
+        align-items: center;
+      }
+
+      .avatars img:nth-of-type(1) {
+        left: 0px;
+      }
+
+      .avatars img:nth-of-type(2) {
+        left: 20px;
+      }
+
+      .avatars img:nth-of-type(3) {
+        left: 40px;
+      }
+
+      .avatars img {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        position: absolute;
+      }
+    }
+
+    .players-quantity svg {
+      height: 1.2rem;
+      width: 1.2rem;
+    }
+
+    .players-quantity .quantity {
+      font-size: 0.75rem;
+    }
+
+    .slide-image {
+      width: 235px;
+        right: -42px;
+        top: 18px;
+    }
+
+    .see-more-wrapper {
+      display: none;
+    }
+
   }
 `;

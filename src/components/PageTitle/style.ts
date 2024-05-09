@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "../../constants/breakpoints";
 
 export const StyledPageTitle = styled.div`
   width: 100%;
@@ -10,5 +11,14 @@ export const StyledPageTitle = styled.div`
 
   span {
     font-weight: 400;
+  }
+
+  @media ${breakpoints.sm} {
+
+    h2 {
+      font-size: 1.25rem;
+      padding: 1rem 0;
+    }
+
   }
 `

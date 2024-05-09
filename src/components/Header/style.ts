@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoints } from '../../constants/breakpoints';
 interface StyledHeaderProps {
   isLightTheme: boolean;
 }
@@ -155,5 +156,11 @@ export const StyledHeader = styled.div<StyledHeaderProps>`
 
   .notification-icon {
     color: ${({ theme }) => theme.colors.placeholder};
+  }
+
+  @media ${breakpoints.sm} {
+    .input-wrapper {
+      display: none;
+    }
   }
 `;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoints } from '../../../../constants/breakpoints';
 
 export const StyledUpcomingTournaments = styled.div`
   background: ${({ theme }) => theme.colors.cardBackground};
@@ -45,6 +46,12 @@ export const StyledUpcomingTournaments = styled.div`
     &:hover {
       color: ${({ theme }) => theme.colors.primary};
 
+    }
+  }
+
+  @media ${breakpoints.sm} {
+    .header {
+      padding: 0 1rem;
     }
   }
 `;
@@ -132,12 +139,15 @@ export const StyledTournamentItem = styled.div`
   }
 
   .tournament-logo {
-    /* height: 64px; */
     max-width: 50px;
   }
 
   .game-logo {
     height: 17px;
     object-fit: cover;
+  }
+
+  @media ${breakpoints.sm} {
+    padding: 1rem;
   }
 `;

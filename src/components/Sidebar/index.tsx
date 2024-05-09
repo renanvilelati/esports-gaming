@@ -16,11 +16,8 @@ const Sidebar = () => {
       </div>
 
       <button className="menu-open-btn" onClick={handleOpenSidebar}>
-        {
-          sidebarIsOpen ? <SlArrowLeft size={12} /> : <SlArrowRight size={12} />
-        }
-        
-        </button>
+        {sidebarIsOpen ? <SlArrowLeft size={12} /> : <SlArrowRight size={12} />}
+      </button>
 
       <nav>
         <ul className="test">
