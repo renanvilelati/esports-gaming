@@ -34,6 +34,24 @@ export const StyledDashboard = styled.div`
     grid-area: general-chat;
   }
 
+  @media ${breakpoints.lg} {
+    grid-template-columns: 894px 350px;
+
+  }
+
+  @media ${breakpoints.md} {
+    max-height: 100%;
+    padding: 1rem;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 205px 1fr 520px 1fr;
+    grid-template-areas:
+        'slide'
+        'top-games'
+        'upcoming-tournaments'
+        'general-chat';
+  }
+
   @media ${breakpoints.sm} {
     max-height: 100%;
     padding: 1rem;

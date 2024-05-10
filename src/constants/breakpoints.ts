@@ -1,7 +1,7 @@
 const sizes = {
   sm: '640px',
   md: '1024px',
-  lg: '1400px',
+  lg: '1450px',
 }
 
 export const breakpoints = {

@@ -100,6 +100,17 @@ export const StyledTopGames = styled.div`
     transition: bottom 0.4s ease-in-out;
   }
 
+  
+  @media ${breakpoints.lg} {
+    button.preview {
+      left: -18px;
+    }
+
+    button.next {
+      right: -18px;
+    }
+  }
+
   @media ${breakpoints.sm} {
     margin-top: 3rem;
     justify-content: flex-start;

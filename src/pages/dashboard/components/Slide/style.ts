@@ -203,6 +203,22 @@ export const StyledSlide = styled.div<StyledSlideProps>`
     }
   }
 
+  @media ${breakpoints.lg} {
+    .slide-image {
+      top: -86px;
+      width: 548px;
+    }
+  }
+
+  @media ${breakpoints.md} {
+    .slide-image {
+      max-width: 350px;
+        right: 31px;
+        top: -72px;
+        width: 100%;
+    }
+  }
+
   @media ${breakpoints.sm} {
     padding-left: 0;
 
@@ -212,7 +228,6 @@ export const StyledSlide = styled.div<StyledSlideProps>`
 
     .text {
       padding: 0 1rem;
-
 
       h2 {
         font-size: 1.25rem;
@@ -268,13 +283,12 @@ export const StyledSlide = styled.div<StyledSlideProps>`
 
     .slide-image {
       width: 235px;
-        right: -42px;
-        top: 18px;
+      right: -42px;
+      top: 18px;
     }
 
     .see-more-wrapper {
       display: none;
     }
-
   }
 `;
