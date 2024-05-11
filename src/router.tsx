@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, } from 'react-router-dom'
+import { Route, Routes, } from 'react-router-dom'
 import Tournament from './pages/tournament';
 import Matches from './pages/Matches';
 import Community from './pages/Community';
@@ -10,7 +10,6 @@ import Dashboard from './pages/dashboard';
 
 export const AppRouter = () => {
   return (
-    <BrowserRouter>
       <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/account" element={<Account />} />
@@ -21,6 +20,5 @@ export const AppRouter = () => {
           <Route path="/matches" element={<Matches />} />
           <Route path="/community" element={<Community />} />
       </Routes>
-    </BrowserRouter>
   );
 };

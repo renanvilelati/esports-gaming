@@ -9,7 +9,6 @@ interface iChildren {
 }
 const Container = ({ children }: iChildren) => {
   const { isLightTheme } = useGlobalContext();
-  console.log(isLightTheme);
 
   const { sidebarIsOpen } = useGlobalContext();
 

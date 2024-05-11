@@ -5,6 +5,7 @@ import { createSidebarMenu } from '../../utils/createSidebarMenu';
 import Divider from '../Divider';
 import { StyledSidebar } from './style';
 import { dataMenu } from './types/menu';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   const { sidebarIsOpen, isLightTheme, handleOpenSidebar } = useGlobalContext();
@@ -25,19 +26,19 @@ const Sidebar = () => {
             return item.code === 'my-team' ? (
               <>
                 <li key={item.id}>
-                  <a href={`/${item.href}`}>
+                  <Link to={`/${item.href}`}>
                     {createSidebarMenu(item.code)}
                     {sidebarIsOpen ? item.label : null}
-                  </a>
+                  </Link>
                 </li>
                 <Divider />
               </>
             ) : (
               <li key={item.id} className={item.class}>
-                <a href={`/${item.href}`}>
+                <Link to={`/${item.href}`}>
                   {createSidebarMenu(item.code)}
                   {sidebarIsOpen ? item.label : null}
-                </a>
+                </Link>
               </li>
             );
           })}
