@@ -10,11 +10,9 @@ interface iChildren {
 const Container = ({ children }: iChildren) => {
   const { isLightTheme } = useGlobalContext();
 
-  const { sidebarIsOpen } = useGlobalContext();
-
   return (
     <ThemeProvider theme={isLightTheme ? lightTheme : darkTheme}>
-      <StyledContainer sidebarIsOpen={sidebarIsOpen}>
+      <StyledContainer>
         {children}
       </StyledContainer>
     </ThemeProvider>

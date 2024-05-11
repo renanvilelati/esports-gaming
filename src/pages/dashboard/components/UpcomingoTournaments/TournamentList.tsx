@@ -7,7 +7,7 @@ interface TournamentListProps {
 
 const TournamentList = ({list}: TournamentListProps) => {
   return (
-    list.map( item => <TournamentItem tournamentItem={item} />)
+    list.map( item => <TournamentItem key={item.id} tournamentItem={item} />)
   )
 }
 

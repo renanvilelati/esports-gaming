@@ -7,7 +7,7 @@ interface ChatListProps {
 
 const ChatList = ({list}: ChatListProps) => {
   return (
-    list.map( item => <ChatItem chatItem={item} />)
+    list.map( item => <ChatItem key={item.id} chatItem={item} />)
   )
 }
 

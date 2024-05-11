@@ -24,15 +24,13 @@ const Sidebar = () => {
         <ul className="test">
           {dataMenu.map((item) => {
             return item.code === 'my-team' ? (
-              <>
-                <li key={item.id}>
+                <li key={item.id} className="myTeamItem">
                   <Link to={`/${item.href}`}>
                     {createSidebarMenu(item.code)}
                     {sidebarIsOpen ? item.label : null}
                   </Link>
+                  <Divider />
                 </li>
-                <Divider />
-              </>
             ) : (
               <li key={item.id} className={item.class}>
                 <Link to={`/${item.href}`}>

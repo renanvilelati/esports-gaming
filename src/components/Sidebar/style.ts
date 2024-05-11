@@ -26,7 +26,8 @@ export const StyledSidebar = styled.aside<iStyledAsideProps>`
     height: 100%;
     position: absolute;
     z-index: 1;
-    background-color: ${({isLightTheme}) => isLightTheme ? '#FFF' : '#0e0e0ed9'};
+    background-color: ${({ isLightTheme }) =>
+      isLightTheme ? '#FFF' : '#0e0e0ed9'};
     backdrop-filter: blur(3px);
   }
 
@@ -91,6 +92,12 @@ export const StyledSidebar = styled.aside<iStyledAsideProps>`
       flex-direction: column;
       height: 100%;
       align-items: center;
+    }
+
+    .myTeamItem {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0.5rem;
     }
 
     li {
