@@ -15,8 +15,7 @@
 
 ## 📗 About
 
-
-The project consists of a system where players from all over the world can create tournaments with rewards or not, and invite their friends to join their teams and assemble opposing teams. It's also possible to confront players individually in 1v1 matches.
+This platform allows players to create teams and tournaments for competitive play. Additionally, users can schedule 1v1 matches, add other players, exchange messages, write community articles, and communicate with an AI to automate various processes within the platform, such as organizing matches and navigating the interface.
 
 ## Features:
 
